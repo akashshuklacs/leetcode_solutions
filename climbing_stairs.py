@@ -5,4 +5,5 @@ class Solution:
             n-=1
             nfib, fib = nfib+fib, nfib
         return nfib
+
         
