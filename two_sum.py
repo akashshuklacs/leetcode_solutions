@@ -1,7 +1,12 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        val_exists_at = dict()
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        complement = dict()
         for i, num in enumerate(nums):
-            if target -num  in val_exists_at:
-                return i, val_exists_at[target-num]
-            val_exists_at[num] = i
+            if target - num in complement:
+               return [i, complement[target-num]] 
+            complement[num] = i
